@@ -40,13 +40,16 @@
         list-style: none;
         border-radius: 1rem;
         box-shadow: 0 0 5rem -3rem rgba(0, 0, 0, 0.75);
+        // opacity: 0;
         animation: closeAnimation 0.3s ease-in-out forwards;
+        // transition: all 0.2s ease-in-out;
 
         & img {
             margin-right: 1.5rem;
         }
 
         &[data-open="true"] {
+            // opacity: 1;
             animation: openAnimation 0.3s ease-in-out forwards;
 
             @include max(1000) {
@@ -69,8 +72,6 @@
 
         &[data-open="false"] {
             @include max(1000) {
-                // padding: 0;
-                // max-height: 0;
                 visibility: hidden;
             }
         }
