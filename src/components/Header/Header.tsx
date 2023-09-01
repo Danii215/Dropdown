@@ -1,5 +1,5 @@
 import style from "./Header.module.scss";
-
+import logo from "@/assets/img/logo.svg";
 import { ReactElement } from "react";
 
 export function Header({ children }: { children?: ReactElement }) {
@@ -7,7 +7,7 @@ export function Header({ children }: { children?: ReactElement }) {
         <header className={style.header}>
             <a href="/">
                 <h1>
-                    <img src="/src/assets/img/logo.svg" alt="SNAP logo" />
+                    <img src={logo} alt="SNAP logo" />
                 </h1>
             </a>
             {children}

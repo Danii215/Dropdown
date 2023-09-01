@@ -1,5 +1,11 @@
 import style from "./FrontPage.module.scss";
 import { OutlinedButton } from "../index";
+import databiz from "@/assets/img/client-databiz.svg";
+import audiophile from "@/assets/img/client-audiophile.svg";
+import meet from "@/assets/img/client-meet.svg";
+import maker from "@/assets/img/client-maker.svg";
+import mobileHero from "@/assets/img/image-hero-mobile.png";
+import desktopHero from "@/assets/img/image-hero-desktop.png";
 
 export function FrontPage() {
     return (
@@ -17,33 +23,15 @@ export function FrontPage() {
                     </OutlinedButton>
                 </div>
                 <div className={style.frontpage__buttons}>
-                    <img
-                        src="src/assets/img/client-databiz.svg"
-                        alt="Client Databiz"
-                    />
-                    <img
-                        src="src/assets/img/client-audiophile.svg"
-                        alt="Client Audiophile"
-                    />
-                    <img
-                        src="src/assets/img/client-meet.svg"
-                        alt="Client Meet"
-                    />
-                    <img
-                        src="src/assets/img/client-maker.svg"
-                        alt="Client Maker"
-                    />
+                    <img src={databiz} alt="Client Databiz" />
+                    <img src={audiophile} alt="Client Audiophile" />
+                    <img src={meet} alt="Client Meet" />
+                    <img src={maker} alt="Client Maker" />
                 </div>
             </article>
             <picture>
-                <source
-                    media="(max-width:1000px)"
-                    srcSet="src/assets/img/image-hero-mobile.png"
-                />
-                <img
-                    src="src/assets/img/image-hero-desktop.png"
-                    alt="Snap hero banner"
-                />
+                <source media="(max-width:1000px)" srcSet={mobileHero} />
+                <img src={desktopHero} alt="Snap hero banner" />
             </picture>
         </section>
     );
