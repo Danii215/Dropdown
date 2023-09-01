@@ -1,0 +1,102 @@
+@import "@/assets/sass/abstracts/variables";
+@import "@/assets/sass/abstracts/utilities";
+
+.frontpage {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    height: 90%;
+
+    &__content {
+        height: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+
+        & .frontpage__container {
+            margin-top: 16rem;
+            display: flex;
+            flex-flow: column;
+            gap: 6rem;
+
+            @include max(1000) {
+                margin-top: unset;
+                gap: 1.8rem;
+                align-items: center;
+            }
+        }
+
+        & .frontpage__buttons {
+            margin-top: 40%;
+            display: flex;
+            align-items: center;
+
+            & img {
+                margin-right: 2.5rem;
+
+                @include max(1000) {
+                    width: 25%;
+
+                    &:nth-of-type(2) {
+                        width: 15%;
+                    }
+
+                    &:nth-of-type(3) {
+                        width: 20%;
+                    }
+
+                    &:nth-of-type(4) {
+                        width: 15%;
+                    }
+                }
+            }
+
+            @include max(1000) {
+                margin-top: 2.6rem;
+                padding: 2rem;
+                width: 100%;
+            }
+        }
+    }
+
+    & h2 {
+        font-size: 6rem;
+        font-weight: 700;
+        color: $almostBlack;
+        margin-bottom: 1rem;
+        width: 75%;
+
+        @include max(1000) {
+            width: unset;
+            padding: 0 1.8rem;
+            font-size: 3.5rem;
+            margin-bottom: unset;
+        }
+    }
+
+    & h3 {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: $mediumGray;
+        width: 75%;
+
+        @include max(1000) {
+            width: 95%;
+            line-height: 3rem;
+            padding: 0 1.8rem;
+            text-align: center;
+        }
+    }
+
+    & picture {
+        @include max(1000) {
+            margin-top: 1rem;
+        }
+    }
+
+    @include max(1000) {
+        flex-flow: column-reverse nowrap;
+        height: unset;
+        gap: 4.5rem;
+    }
+}

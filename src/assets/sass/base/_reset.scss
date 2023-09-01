@@ -1,3 +1,4 @@
+@import "@/assets/sass/abstracts/variables";
 @import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&family=League+Spartan:wght@700&display=swap");
 
 *,
@@ -6,19 +7,27 @@
     margin: 0;
     padding: 0;
     box-sizing: inherit;
-    font-family: "League Spartan", sans-serif;
+    font-family: "Epilogue", sans-serif;
+    font-weight: 500;
     -webkit-tap-highlight-color: transparent;
 }
 html {
     scroll-behavior: smooth;
     font-size: 62.5%;
+    background-color: $almostWhite;
+    height: 100%;
+    min-height: 100%;
+    overflow: hidden;
 }
 body {
     box-sizing: border-box;
     position: relative;
+    height: 100%;
+    overflow: hidden;
 }
 main {
     position: relative;
+    height: 90%;
 }
 img {
     max-width: 100%;
@@ -28,8 +37,25 @@ a {
     color: inherit;
     text-decoration: none;
 }
+button {
+    color: inherit;
+    font-size: inherit;
+    border: none;
+    background: none;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
 .wrapper {
     margin: 0 auto;
     width: 80%;
-    max-width: 1350px;
+    max-width: 114rem;
+
+    @include max(1000) {
+        width: 100%;
+    }
+}
+#root {
+    height: 100%;
 }
